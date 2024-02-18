@@ -1,5 +1,7 @@
 # Highway Name Remover
 
+Do not install using Mod Manager, only manual install works.
+
 This mod removes display names from highways. Note: Currently only works for English language.
 
 You can still change the name of a highway to a custom one, just the default values are invisible. If you want to remove a custom name, just remove all the text and hit Enter, it will then default back to the original (invisible) name.
