@@ -24,7 +24,7 @@ def patch_section(section, filename):
 
     for i in range(0, 109):
         look_for = section + ":" + str(i)
-        index = update_content.find(look_for.encode('utf-8'))
+        index = update_content.find(look_for.encode('utf-8')) + len(look_for)
         # check if char at current index is in valid_chars
         while update_content[index] > 16:
             # print("Found valid char: " + chr(update_content[index]) + " at index: " + str(index))
@@ -39,50 +39,10 @@ def patch_section(section, filename):
 
         name_length = end_index - start_index
         update_content[start_index:end_index] = b" " * name_length
-        print(update_content[start_index:end_index])
+        #print(update_content[start_index:end_index])
 
     with open(filename, 'wb') as file:
         file.write(update_content)
-
-
-"""def update_locale(filename):
-    text = ""
-    with open("original/" + filename, 'rb') as file:
-        text = file.read()  # Read binary file content
-
-    updated_content = bytearray(text)
-
-    for i in range(0, 109):
-        add_byte = 0
-        if i > 9:
-            add_byte = 1
-        if i > 99:
-            add_byte = 2
-        lookfor = "Assets.HIGHWAY_NAME:" + str(i)
-        index = updated_content.find(lookfor.encode('utf-8'))
-        start_index = index + 22 + add_byte
-        print(updated_content[start_index:index + 30])
-
-        end_index = start_index
-        for j in range(0, 30):
-            if updated_content[start_index + j] == 32:
-                print("Space found")
-                end_index = start_index + j + len(" Highway")
-                break
-        print(updated_content[start_index:end_index])
-
-        updated_content[start_index:end_index] = b" " * (end_index - start_index)
-
-    with open("updated/" + filename, 'wb') as file:
-        file.write(updated_content)
-
-
-def update_dir():
-    # Loop through all files in /original folder
-    for filename in os.listdir("original"):
-        if filename.endswith('.loc'):
-            update_locale(filename)
-"""
 
 
 def patch_all_sections(locale):
@@ -96,7 +56,8 @@ def patch_all_sections(locale):
 
 def patch_all_locales():
     patch_all_sections("en-US")
-    patch_all_sections("de-DE")
+    # Other languages are not yet working
+    """patch_all_sections("de-DE")
     patch_all_sections("es-ES")
     patch_all_sections("fr-FR")
     patch_all_sections("it-IT")
@@ -106,7 +67,7 @@ def patch_all_locales():
     patch_all_sections("pt-BR")
     patch_all_sections("ru-RU")
     patch_all_sections("zh-HANS")
-    patch_all_sections("zh-HANT")
+    patch_all_sections("zh-HANT")"""
 
 
 if __name__ == '__main__':
