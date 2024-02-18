@@ -11,7 +11,7 @@ None
 ## Installation
 
 1. Download the ZIP file.
-2. Find your `Cities: Skylines II` game folder (default: `C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines II`) and navigate to `Cities2_Data\StreamingAssets\Data~`
+2. Find your Cities: Skylines II game folder (default: `C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines II`) and navigate to `Cities2_Data\StreamingAssets\Data~`
 3. Replace `en-US.loc` with the one from the ZIP file.
 
 ## Further Notes
