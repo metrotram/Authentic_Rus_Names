@@ -14,7 +14,8 @@ None
 
 1. Download the ZIP file.
 2. Find your Cities: Skylines II game folder (default: `C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines II`) and navigate to `Cities2_Data\StreamingAssets\Data~`
-3. Replace `en-US.loc` with the one from the ZIP file.
+3. Choose either the `onlyHighway`-folder to only remove highway names or the `allRoads`-folder to remove all road names.
+4. Replace `en-US.loc` with the file from the folder you just chose.
 
 ## Further Notes
 
