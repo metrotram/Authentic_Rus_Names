@@ -26,7 +26,7 @@ def patch_section(section, filename):
         look_for = section + ":" + str(i)
         index = update_content.find(look_for.encode('utf-8')) + len(look_for)
         # check if char at current index is in valid_chars
-        while update_content[index] > 16:
+        while chr(update_content[index]) in valid_chars:
             # print("Found valid char: " + chr(update_content[index]) + " at index: " + str(index))
             index += 1
         # ch = chr(update_content[index])
