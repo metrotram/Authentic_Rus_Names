@@ -1,6 +1,6 @@
 {
   "name": "Highway_Name_Remover",
-  "version_number": "1.0",
+  "version_number": "1.0.0",
   "website_url": "https://github.com/kosch104/CS2-HighwayNameRemover",
   "description": "Removes Display Names for all Streets and Highways",
   "dependencies": [
