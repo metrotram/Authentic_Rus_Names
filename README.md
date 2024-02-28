@@ -1,22 +1,27 @@
 # Highway Name Remover
 
-Do not install using Mod Manager, only manual install works.
+Now works with Mod Managers!
 
-This mod removes display names from highways. Note: Currently only works for English language.
+This mod removes display names from roads, highways, alleys, bridges and dams.
 
 You can still change the name of a highway to a custom one, just the default values are invisible. If you want to remove a custom name, just remove all the text and hit Enter, it will then default back to the original (invisible) name.
 
 ## Dependencies
 
-None
+- BepInEx 5
 
 ## Installation
 
-1. Download the ZIP file.
-2. Find your Cities: Skylines II game folder (default: `C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines II`) and navigate to `Cities2_Data\StreamingAssets\Data~`
-3. Replace `en-US.loc` with the one from the ZIP file.
+This mod can easily be installed using r2modman or Thunderstore Mod Manager. If you want to install it manually, follow these steps:
+
+1. Make sure BepInEx 5 is installed
+2. Download the file
+3. Extract the `HighwayNameRemover.zip` file into the `BepInEx\plugins` folder
+
 
 ## Further Notes
+- This mod works for all languages
+- [Changelog](https://github.com/kosch104/CS2-HighwayNameRemover/blob/main/CHANGELOG.md)
 
-This only works for highways. If wanted I can work on a version for streets as well. Feel free to create an issue in the GitHub repository to get in contact.
+
 
