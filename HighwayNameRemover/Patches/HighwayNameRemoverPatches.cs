@@ -9,7 +9,7 @@ namespace HighwayNameRemover.Patches
     {
         static void Prefix(LocaleAsset asset)
         {
-            Localization.Localization.AddCustomLocal(asset);
+            Localization.AddCustomLocal(asset);
         }
     }
 }

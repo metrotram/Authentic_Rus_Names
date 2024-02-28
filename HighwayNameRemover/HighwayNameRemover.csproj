@@ -429,7 +429,12 @@
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</None>
 	</ItemGroup>
-	
+
+	<ItemGroup>
+		<EmbeddedResource Include="embedded\Localization\Localization.jsonc"></EmbeddedResource>
+	</ItemGroup>
+
+
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
 	  <Exec Command="if not exist &quot; $(Cities2_Game_Location)\BepInEx\plugins\$(ProjectName)&quot; mkdir &quot;$(Cities2_Game_Location)\BepInEx\plugins\$(ProjectName)&quot;&#xA;&#xA;					copy /Y &quot;$(TargetDir)0Harmony.dll&quot; &quot;$(Cities2_Game_Location)\BepInEx\plugins\$(ProjectName)\0Harmony.dll&quot;&#xA;&#xA;					copy /Y &quot;$(TargetDir)$(ProjectName).dll&quot; &quot;$(Cities2_Game_Location)\BepInEx\plugins\$(ProjectName)\$(ProjectName).dll&quot;" />
 	</Target>

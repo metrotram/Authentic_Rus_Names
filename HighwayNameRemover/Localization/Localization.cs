@@ -5,7 +5,7 @@ using System.Reflection;
 using Colossal.IO.AssetDatabase;
 using Colossal.Json;
 
-namespace HighwayNameRemover.Localization
+namespace HighwayNameRemover
 {
 	public class Localization
 	{
