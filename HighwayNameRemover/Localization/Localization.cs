@@ -36,7 +36,8 @@ namespace HighwayNameRemover
 		}
 
 		private static Dictionary<string, Dictionary<string, string>> LoadLocalization() {
-			var localizationFile = Assembly.GetExecutingAssembly().GetManifestResourceStream("HighwayNameRemover.embedded.Localization.Localization.jsonc");
+			//var localizationFile = Assembly.GetExecutingAssembly().GetManifestResourceStream("HighwayNameRemover.embedded.Localization.Localization.jsonc");
+			var localizationFile = Assembly.GetExecutingAssembly().GetManifestResourceStream($"{Assembly.GetExecutingAssembly().GetName().Name}.embedded.Localization.Localization.jsonc");
 			localization = Decoder.Decode(new StreamReader(localizationFile).ReadToEnd()).Make<LocalizationJS>().Localization;
 			return localization;
 		}
