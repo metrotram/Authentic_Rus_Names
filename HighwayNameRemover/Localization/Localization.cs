@@ -9,37 +9,45 @@ namespace HighwayNameRemover
 {
 	public class Localization
 	{
-		internal delegate Dictionary<string, Dictionary<string, string>> OnLoadLocalization();
-		internal static OnLoadLocalization onLoadLocalization = LoadLocalization;
 		internal static Dictionary<string, Dictionary<string, string>> localization;
 
 		internal static void AddCustomLocal(LocaleAsset localeAsset) { //Dictionary<string, string>
 
-			if(onLoadLocalization != null) foreach(Delegate @delegate in onLoadLocalization.GetInvocationList()) {
+			if(localization is null) LoadLocalization();
 
-				object result = @delegate.DynamicInvoke();
+			string loc = localeAsset.localeId;
 
-				if(result is not Dictionary<string, Dictionary<string, string>> localization) return;
+			if(!localization.ContainsKey(loc)) loc = "en-US";
 
-				string loc = localeAsset.localeId;
+            foreach(string key in localization[loc].Keys) {
+                if(localeAsset.data.entries.ContainsKey(key))
+	                localeAsset.data.entries[key] = localization[loc][key];
+                else
+	                localeAsset.data.entries.Add(key, localization[loc][key]);
 
-				if(!localization.ContainsKey(loc)) loc = "en-US";
+                if(!key.Contains(":")) continue;
 
-				foreach(string key in localization[loc].Keys) {
-					if(localeAsset.data.entries.ContainsKey(key)) localeAsset.data.entries[key] = localization[loc][key];
-					else localeAsset.data.entries.Add(key, localization[loc][key]);
-
-					if(localeAsset.data.indexCounts.ContainsKey(key)) localeAsset.data.indexCounts[key] = localeAsset.data.indexCounts.Count;
-					else localeAsset.data.indexCounts.Add(key, localeAsset.data.indexCounts.Count);
-				}
-			}
+                string[] parts = key.Split(":");
+                if (int.TryParse(parts[1], out int n))
+                {
+	                n++;
+	                if (localeAsset.data.indexCounts.ContainsKey(parts[0]))
+	                {
+		                if (localeAsset.data.indexCounts[parts[0]] != n) // Was <
+		                {
+			                localeAsset.data.indexCounts[parts[0]] = n;
+		                }
+	                }
+	                else localeAsset.data.indexCounts.Add(parts[0], n);
+                }
+            }
 		}
 
-		private static Dictionary<string, Dictionary<string, string>> LoadLocalization() {
+		private static void LoadLocalization()
+		{
 			//var localizationFile = Assembly.GetExecutingAssembly().GetManifestResourceStream("HighwayNameRemover.embedded.Localization.Localization.jsonc");
 			var localizationFile = Assembly.GetExecutingAssembly().GetManifestResourceStream($"{Assembly.GetExecutingAssembly().GetName().Name}.embedded.Localization.Localization.jsonc");
 			localization = Decoder.Decode(new StreamReader(localizationFile).ReadToEnd()).Make<LocalizationJS>().Localization;
-			return localization;
 		}
 
 	}
