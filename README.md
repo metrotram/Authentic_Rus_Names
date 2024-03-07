@@ -2,7 +2,7 @@
 
 Now works with Mod Managers!
 
-The mod replaces the automatic names in the game with non-authentic Russian ones.
+The mod replaces the automatic names in the game with authentic Russian ones.
 
 Names have been changed:
 - Alleys, streets, highways;
@@ -30,8 +30,9 @@ This mod can easily be installed using r2modman or Thunderstore Mod Manager. If 
 
 ------ 
 ## Аутентичные Российские названия
+РАБОТАЕТ С МОД-МЕНЕДЖЕРОМ! 
 
-Мод заменяет автоматические названия в игре не аутентичные Российские. 
+Мод заменяет автоматические названия в игре на аутентичные Российские. 
 
 Изменены названия:
 - Переулков, улиц, шоссе;
