@@ -1,7 +1,7 @@
 {
-  "name": "Highway_Name_Remover",
-  "version_number": "1.0.0",
-  "website_url": "https://github.com/kosch104/CS2-HighwayNameRemover",
-  "description": "Removes Display Names for all Streets and Highways",
+  "name": "Authentic_Rusian_Names",
+  "version_number": "2.0.0",
+  "website_url": "https://github.com/metrotram/Authentic_Rus_Names",
+  "description": "The mod replaces the automatic names in the game with authentic Russian ones.",
   "dependencies": [ "BepInEx-BepInExPack-5.4.2100" ]
 }
