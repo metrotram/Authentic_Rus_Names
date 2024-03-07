@@ -1,6 +1,6 @@
 # Authentic Rusian Names
 
-Now works with Mod Managers!
+Now works with Mod Managers! (Many thanks to kosch104 for the help with the adaptation)
 
 The mod replaces the automatic names in the game with authentic Russian ones.
 
@@ -30,7 +30,7 @@ This mod can easily be installed using r2modman or Thunderstore Mod Manager. If 
 
 ------ 
 ## Аутентичные Российские названия
-РАБОТАЕТ С МОД-МЕНЕДЖЕРОМ! 
+РАБОТАЕТ С МОД-МЕНЕДЖЕРОМ! (Большое спасибо kosch104 за помощь с адаптацией)
 
 Мод заменяет автоматические названия в игре на аутентичные Российские. 
 
