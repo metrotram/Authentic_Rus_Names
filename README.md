@@ -29,7 +29,9 @@ This mod can easily be installed using r2modman or Thunderstore Mod Manager. If 
 3. Extract the `HighwayNameRemover.zip` file into the `BepInEx\plugins` folder
 
 ------ 
-## Мод заменяет автоматические названия в игре не аутентичные Российские. 
+## Аутентичные Российские названия
+
+Мод заменяет автоматические названия в игре не аутентичные Российские. 
 
 Изменены названия:
 - Переулков, улиц, шоссе;
