@@ -64,12 +64,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<None Update="DefaultSettings.json">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-	</ItemGroup>
-
-	<ItemGroup>
 		<EmbeddedResource Include="embedded\Localization\Localization.jsonc"></EmbeddedResource>
 	</ItemGroup>
 
