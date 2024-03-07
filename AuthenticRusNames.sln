@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HighwayNameRemover", "HighwayNameRemover\HighwayNameRemover.csproj", "{7463A10D-E1B7-426E-8D70-3D363F7FAD4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticRusNames", "HighwayNameRemover\AuthenticRusNames.csproj", "{7463A10D-E1B7-426E-8D70-3D363F7FAD4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
