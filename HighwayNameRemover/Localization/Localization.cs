@@ -5,7 +5,7 @@ using System.Reflection;
 using Colossal.IO.AssetDatabase;
 using Colossal.Json;
 
-namespace HighwayNameRemover
+namespace AuthenticRusNames
 {
 	public class Localization
 	{
@@ -17,7 +17,7 @@ namespace HighwayNameRemover
 
 			string loc = localeAsset.localeId;
 
-			if(!localization.ContainsKey(loc)) loc = "en-US";
+			if(!localization.ContainsKey(loc)) loc = "ru-RU";
 
             foreach(string key in localization[loc].Keys) {
                 if(localeAsset.data.entries.ContainsKey(key))
@@ -45,7 +45,7 @@ namespace HighwayNameRemover
 
 		private static void LoadLocalization()
 		{
-			//var localizationFile = Assembly.GetExecutingAssembly().GetManifestResourceStream("HighwayNameRemover.embedded.Localization.Localization.jsonc");
+			//var localizationFile = Assembly.GetExecutingAssembly().GetManifestResourceStream("AuthenticRusNames.embedded.Localization.Localization.jsonc");
 			var localizationFile = Assembly.GetExecutingAssembly().GetManifestResourceStream($"{Assembly.GetExecutingAssembly().GetName().Name}.embedded.Localization.Localization.jsonc");
 			localization = Decoder.Decode(new StreamReader(localizationFile).ReadToEnd()).Make<LocalizationJS>().Localization;
 		}
