@@ -18,6 +18,9 @@ This mod can easily be installed using r2modman or Thunderstore Mod Manager. If 
 2. Download the file
 3. Extract the `HighwayNameRemover.zip` file into the `BepInEx\plugins` folder
 
+## Compatibility
+- This mod is not compatible with other mods replacing the localization files (I currently don't know any mods that do)
+
 ## Further Notes
 - This mod works for all languages
 - [Changelog](https://github.com/kosch104/CS2-HighwayNameRemover/blob/main/CHANGELOG.md)
