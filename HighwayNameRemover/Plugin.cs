@@ -8,7 +8,7 @@ using BepInEx.Logging;
     using BepInEx.Unity.Mono;
 #endif
 
-namespace AuthenticRusNames
+namespace HighwayNameRemover
 {
     [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
     public class Plugin : BaseUnityPlugin
@@ -18,7 +18,7 @@ namespace AuthenticRusNames
         {
             Logger = base.Logger;
 
-            Logger.LogInfo("[AuthenticRusNames]: Loading Harmony patches.");
+            Logger.LogInfo("[HighwayNameRemover]: Loading Harmony patches.");
 
             var harmony = Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), MyPluginInfo.PLUGIN_GUID + "_Cities2Harmony");
             var patchedMethods = harmony.GetPatchedMethods().ToArray();
@@ -26,7 +26,7 @@ namespace AuthenticRusNames
             Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} made patches! Patched methods: " + patchedMethods.Length);
             foreach (var patchedMethod in patchedMethods)
             {
-                Logger.LogInfo($"[AuthenticRusNames]: Patched method: {patchedMethod.Module.Name}:{patchedMethod.Name}");
+                Logger.LogInfo($"[HighwayNameRemover]: Patched method: {patchedMethod.Module.Name}:{patchedMethod.Name}");
             }
         }
     }
