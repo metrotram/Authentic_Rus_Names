@@ -1,10 +1,20 @@
-# Highway Name Remover
+# Authentic Rusian Names
 
 Now works with Mod Managers!
 
-This mod removes display names from roads, highways, alleys, bridges and dams.
+The mod replaces the automatic names in the game with non-authentic Russian ones.
 
-You can still change the name of a highway to a custom one, just the default values are invisible. If you want to remove a custom name, just remove all the text and hit Enter, it will then default back to the original (invisible) name.
+Names have been changed:
+- Alleys, streets, highways;
+- Bridges and dams;
+- Districts;
+- Cities.
+
+Also changed:
+- The names and surnames of the citizens, as well as the surnames of the families they form;
+- Animal names (partially).
+
+In total, about 3,000 thousand new variants of authentic names have been added.
 
 ## Dependencies
 
@@ -18,12 +28,26 @@ This mod can easily be installed using r2modman or Thunderstore Mod Manager. If 
 2. Download the file
 3. Extract the `HighwayNameRemover.zip` file into the `BepInEx\plugins` folder
 
-## Compatibility
-- This mod is not compatible with other mods replacing the localization files (I currently don't know any mods that do)
+------ 
+## Мод заменяет автоматические названия в игре не аутентичные Российские. 
 
-## Further Notes
-- This mod works for all languages
-- [Changelog](https://github.com/kosch104/CS2-HighwayNameRemover/blob/main/CHANGELOG.md)
+Изменены названия:
+- Переулков, улиц, шоссе;
+- Мостов и дамб;
+- Районов;
+- Городов.
 
+Также изменены:
+- Имена и фамилии горожан, а также фамилии образуемых ими семей;
+- Клички животных (частично).
 
+Всего добавлено около 3000 тысяч новых вариантов аутентичных названий.
+
+## Установка
+
+Этот мод можно легко установить с помощью r2modman или Thunder store Mod Manager. Если вы хотите установить его вручную, выполните следующие действия:
+
+1. Убедитесь, что у вас установлен BepInEx 5
+2. Загрузите файл
+3. Извлеките файл `HighwayNameRemover.zip` в папку `BepInEx\plugins`
 
